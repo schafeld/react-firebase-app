@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './app/layout/styles.css';
+import App from './app/layout/App';
 import reportWebVitals from './reportWebVitals';
 
 const rootElement = document.getElementById('root');
@@ -12,7 +12,7 @@ function render() {
 
 // Trick to trigger hot reload without page reload
 if (module.hot) {
-  module.hot.accept('./App', function() {
+  module.hot.accept('./app/layout/App', function() {
     setTimeout(render);
   })
 }
