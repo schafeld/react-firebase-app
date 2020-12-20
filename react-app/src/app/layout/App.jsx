@@ -1,14 +1,10 @@
-import { Button } from "semantic-ui-react";
+import EventDashboard from "../../features/events/eventDashboard/EventDashboard";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <h1>Olli's App</h1>
-      <button type="button" className="ui icon red button">
-        <i className="user icon"></i>CSS Button
-      </button>
-
-      <Button icon="user" content="React Semantic UI Button" color="green" loading="true" />
+      <EventDashboard />
     </div>
   );
 }
