@@ -68,3 +68,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Information
+
+Project start is based on [tutorial](https://www.udemy.com/course/build-an-app-with-react-redux-and-firestore-from-scratch). Will (hopefully) turn into a project of its own.
