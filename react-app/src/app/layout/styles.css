@@ -15,3 +15,8 @@ body {
 .ui.main.container {
   margin-top: 8em;;
 }
+
+/* TODO: move to EventList component/wrapper. */
+i.icon.event-detail:nth-child(n+2) {
+  margin-left: 1em;
+}
