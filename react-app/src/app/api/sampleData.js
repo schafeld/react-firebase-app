@@ -7,18 +7,18 @@ export const sampleData = [
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sollicitudin ligula eu leo tincidunt, quis scelerisque magna dapibus. Sed eget ipsum vel arcu vehicula ullamcorper.',
       city: 'NY, USA',
       venue: 'Empire State Building, 5th Avenue, New York, NY, USA',
-      hostedBy: 'Bob',
-      hostPhotoURL: 'https://randomuser.me/api/portraits/men/20.jpg',
+      hostedBy: 'Beatrice',
+      hostPhotoURL: 'https://randomuser.me/api/portraits/women/20.jpg',
       attendees: [
           {
               id: 'a',
               name: 'Bob',
-              photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
+              photoURL: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png'
           },
           {
               id: 'b',
               name: 'Tom',
-              photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
+              photoURL: 'https://randomuser.me/api/portraits/men/29.jpg'
           }
       ]
   },
@@ -31,17 +31,17 @@ export const sampleData = [
       city: 'London, UK',
       venue: 'Punch & Judy, Henrietta Street, London, UK',
       hostedBy: 'Tom',
-      hostPhotoURL: 'https://randomuser.me/api/portraits/men/22.jpg',
+      hostPhotoURL: 'https://randomuser.me/api/portraits/men/42.jpg',
       attendees: [
           {
               id: 'a',
-              name: 'Bob',
-              photoURL: 'https://randomuser.me/api/portraits/men/20.jpg'
+              name: 'Charlene',
+              photoURL: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png'
           },
           {
               id: 'b',
-              name: 'Tom',
-              photoURL: 'https://randomuser.me/api/portraits/men/22.jpg'
+              name: 'Alice',
+              photoURL: 'https://randomuser.me/api/portraits/women/20.jpg'
           }
       ]
   }
