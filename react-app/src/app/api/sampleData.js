@@ -41,7 +41,7 @@ export const sampleData = [
           {
               id: 'b',
               name: 'Alice',
-              photoURL: 'https://randomuser.me/api/portraits/women/20.jpg'
+              photoURL: 'https://randomuser.me/api/portraits/women/27.jpg'
           }
       ]
   }
