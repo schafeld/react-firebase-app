@@ -15,7 +15,7 @@ export default function EventDashboard({formOpen, setFormOpen}) {
       <Grid.Column width={6} >
       {/* React 'ternary' to toggle form visibility. */}
       {formOpen &&
-        <EventForm setFormOpen={setFormOpen} />}
+        <EventForm setFormOpen={setFormOpen} setEvents={setEvents} />}
       </Grid.Column>
     </Grid>
   )
