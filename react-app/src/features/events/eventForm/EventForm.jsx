@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import { Button, Form, Header, Segment } from 'semantic-ui-react';
 import cuid from 'cuid';
 
-export default function EventForm({setFormOpen, setEvents, createEvent}) {
-  const initialValues = {
+export default function EventForm({setFormOpen, setEvents, createEvent, selectedEvent}) {
+  const initialValues = selectedEvent ?? {
     title: '',
     category: '',
     description: '',
     city: '',
     venue: '',
     date: ''
-  }
+  };
   const [values, setValues] = useState(initialValues);
 
   function handleFormSubmit() {

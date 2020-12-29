@@ -4,17 +4,17 @@ import EventList from './EventList';
 import EventForm from '../eventForm/EventForm';
 import { sampleData } from '../../../app/api/sampleData';
 
-export default function EventDashboard({formOpen, setFormOpen}) {
+export default function EventDashboard({formOpen, setFormOpen, selectEvent, selectedEvent}) {
   const [events, setEvents] = useState(sampleData);
 
-  function handleCreateEvent(ev) {
-    setEvents([...events, ev])
+  function handleCreateEvent(event) {
+    setEvents([...events, event])
   }
 
   return(
     <Grid>
       <Grid.Column width={10} >
-        <EventList events={events} />
+        <EventList events={events} selectEvent={selectEvent} />
       </Grid.Column>
       <Grid.Column width={6} >
       {/* React 'ternary' to toggle form visibility. */}
@@ -23,6 +23,7 @@ export default function EventDashboard({formOpen, setFormOpen}) {
           setFormOpen = {setFormOpen}
           setEvents = {setEvents}
           createEvent = {handleCreateEvent}
+          selectedEvent={selectedEvent}
         />}
       </Grid.Column>
     </Grid>
