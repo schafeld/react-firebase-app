@@ -23,7 +23,8 @@ export default function EventDashboard({formOpen, setFormOpen, selectEvent, sele
           setFormOpen = {setFormOpen}
           setEvents = {setEvents}
           createEvent = {handleCreateEvent}
-          selectedEvent={selectedEvent}
+          selectedEvent = {selectedEvent}
+          key = {selectedEvent ? selectEvent.id : null}
         />}
       </Grid.Column>
     </Grid>
