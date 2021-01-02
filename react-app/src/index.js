@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 
 import 'semantic-ui-css/semantic.min.css'
 import './app/layout/styles.css';
@@ -10,7 +11,12 @@ import reportWebVitals from './reportWebVitals';
 const rootElement = document.getElementById('root');
 
 function render() {
-  ReactDOM.render(<App />, rootElement)
+  ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    , rootElement
+  )
 }
 
 // Trick to trigger hot reload without page reload
