@@ -18,6 +18,8 @@ export default function EventDashboard({formOpen, setFormOpen, selectEvent, sele
       </Grid.Column>
       <Grid.Column width={6} >
       {/* React 'ternary' to toggle form visibility. */}
+      {/* This one key is still not enough to trigger detail display/change on clicking View buttons... */}
+      {/* ...TODO: Yet unclear. Add another key somewhere? */}
       {formOpen &&
         <EventForm 
           setFormOpen = {setFormOpen}
