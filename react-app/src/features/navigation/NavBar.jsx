@@ -8,7 +8,6 @@ export default function NavBar({setFormOpen}) {
     <Container>
       <Menu.Item as={NavLink} exact to='/' header>
         <img src='/assets/logo.svg' alt='logo' id="logo" />
-        Olli's Event App
       </Menu.Item>
       <MenuItem name='Events' as={NavLink} to='/events' />
       <MenuItem as={NavLink} to='/createEvent'>
