@@ -9,7 +9,9 @@ export default function EventListItem({event, selectEvent}) {
         <ItemGroup>
           <Item.Image size="tiny" circular src={event.hostPhotoURL} />
           <Item.Content>
-            <Item.Header content={event.title} />
+            <Item.Header>
+              <h3>{event.title}</h3>
+            </Item.Header>
             <Item.Description>
               Subtitle / Hosted by... 
             </Item.Description>
