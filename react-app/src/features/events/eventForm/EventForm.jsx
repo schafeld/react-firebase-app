@@ -37,7 +37,7 @@ export default function EventForm({setFormOpen, setEvents, createEvent, selected
 
   return (
     <Segment clearing>
-      <Header content='Create new event' />
+      <Header content={selectedEvent ? 'Edit event details' : 'Create new event'} />
       <Form onSubmit={handleFormSubmit}>
         <Form.Field>
           <input
