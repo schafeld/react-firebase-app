@@ -8,15 +8,8 @@ import EventDetailedPage from "../../features/events/eventDetailed/EventDetailed
 import EventForm from "../../features/events/eventForm/EventForm";
 
 function App() {
-  const [formOpen, setFormOpen] = useState(true);
-  const [selectedEvent, setSelectedEvent] = useState(null);
-
-  function handleSelectEvent(event) {
-    setSelectedEvent(event);
-    setFormOpen(true);
-    console.log('"View" clicked');
-    // console.log(event);
-  }
+  const [setFormOpen] = useState(true);
+  const [setSelectedEvent] = useState(null);
 
   function handleCreateFormOpen() {
     setSelectedEvent(null);
