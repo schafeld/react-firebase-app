@@ -26,7 +26,7 @@ function App() {
           <Container className="main">
             <Route exact path='/events' component={EventDashboard} />
             <Route path='/events/:id' component={EventDetailedPage} />
-            <Route path='/createEvent' component={EventForm} />
+            <Route path={['/createEvent', '/manage/:id']} component={EventForm} />
           </Container>
         </>
         )}
@@ -36,10 +36,3 @@ function App() {
 }
 
 export default App;
-
-// <EventDashboard
-// formOpen={formOpen}
-// setFormOpen={setFormOpen}
-// selectEvent={handleSelectEvent}
-// selectedEvent={selectedEvent}
-// />
