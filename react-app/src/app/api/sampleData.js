@@ -12,12 +12,12 @@ export const sampleData = [
       attendees: [
           {
               id: 'a',
-              name: 'Bob',
+              displayName: 'Bob',
               photoURL: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png'
           },
           {
               id: 'b',
-              name: 'Tom',
+              displayName: 'Tom',
               photoURL: 'https://randomuser.me/api/portraits/men/29.jpg'
           }
       ]
@@ -35,12 +35,12 @@ export const sampleData = [
       attendees: [
           {
               id: 'a',
-              name: 'Charlene',
+              displayName: 'Charlene',
               photoURL: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png'
           },
           {
               id: 'b',
-              name: 'Alice',
+              displayName: 'Alice',
               photoURL: 'https://randomuser.me/api/portraits/women/27.jpg'
           }
       ]
