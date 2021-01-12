@@ -2,16 +2,11 @@ import React from 'react';
 import EventListItem from './EventListItem';
 
 // destructured props.events into {events}
-export default function EventList({events, selectEvent, deleteEvent}) {
+export default function EventList({events}) {
   return (
     <>
       {events.map(eventItem => (
-        <EventListItem
-          event = {eventItem}
-          key = {eventItem.id}
-          selectEvent = {selectEvent}
-          deleteEvent = {deleteEvent}
-        />
+        <EventListItem event = {eventItem} key = {eventItem.id} />
       ))}
     </>
   )
