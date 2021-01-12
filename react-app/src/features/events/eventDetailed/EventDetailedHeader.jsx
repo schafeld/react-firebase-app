@@ -46,7 +46,7 @@ export default function EventDetailedHeader({event}) {
         <Button color="teal">JOIN THIS EVENT</Button>
 
         {/* TODO: Add event id. */}
-        <Button as={Link} to={`/manage/`} color="orange" floated="right">
+        <Button as={Link} to={`/manage/${event.id}`} color="orange" floated="right">
             Manage Event
         </Button>
     </Segment>
