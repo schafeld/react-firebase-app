@@ -4,7 +4,9 @@ import { Button, Header, Segment, FormField } from 'semantic-ui-react';
 import cuid from 'cuid';
 import { useSelector, useDispatch } from 'react-redux';
 import { createEvent, updateEvent } from '../eventActions';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import { Label } from 'semantic-ui-react';
 
 export default function EventForm({ match, history }) {
   const dispatch = useDispatch();
@@ -18,30 +20,27 @@ export default function EventForm({ match, history }) {
     venue: '',
     date: ''
   };
-  const [values, setValues] = useState(initialValues);
 
-  function handleFormSubmit() {
-    selectedEvent
-      ? dispatch(updateEvent({...selectedEvent, ...values}))
-      : dispatch(createEvent({
-        ...values,
-        id: cuid(),
-        hostedBy: 'Harry Placeholder',
-        attendees: [{
-          id: 'placeholder_id',
-          name: 'Pete Placeholder',
-          photoURL: 'https://randomuser.me/api/portraits/men/29.jpg'
-        }],
-        hostPhotoURL: '/assets/icons/user.svg'
-      }));
-    history.push('/events');
-  }
-
-  function handleInputChange(e) {
-    // getting values from targeted input field through destructuring
-    const {name, value} = e.target;
-    setValues({...values, [name]: value});
-  }
+  const validationSchema = Yup.object({
+    title: Yup.string().required('Bitte den Titel der Veranstaltung angeben.')
+  })
+ 
+  // function handleFormSubmit() {
+  //   selectedEvent
+  //     ? dispatch(updateEvent({...selectedEvent, ...values}))
+  //     : dispatch(createEvent({
+  //       ...values,
+  //       id: cuid(),
+  //       hostedBy: 'Harry Placeholder',
+  //       attendees: [{
+  //         id: 'placeholder_id',
+  //         name: 'Pete Placeholder',
+  //         photoURL: 'https://randomuser.me/api/portraits/men/29.jpg'
+  //       }],
+  //       hostPhotoURL: '/assets/icons/user.svg'
+  //     }));
+  //   history.push('/events');
+  // }
 
   return (
     <Segment clearing>
@@ -49,11 +48,14 @@ export default function EventForm({ match, history }) {
       <Formik
         initialValues={initialValues}
         onSubmit={ values => console.log(values) }
+        validationSchema={validationSchema}
       >
         <Form className='ui form'>
           <FormField>
             <Field name='title' placeholder='Event Title' />
+            <ErrorMessage name='title' render={error => <Label basic color='red' content={error} />} />
           </FormField>
+          
           <FormField>
             <Field name='category' placeholder='Category' />
           </FormField>
