@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Header, Segment, FormField } from 'semantic-ui-react';
-import cuid from 'cuid';
+// import cuid from 'cuid';
 import { useSelector, useDispatch } from 'react-redux';
 import { createEvent, updateEvent } from '../eventActions';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { Label } from 'semantic-ui-react';
+// import { Label } from 'semantic-ui-react';
+import MyTextInput from '../../../app/common/form/MyTextInput';
 
 export default function EventForm({ match, history }) {
   const dispatch = useDispatch();
@@ -51,11 +52,7 @@ export default function EventForm({ match, history }) {
         validationSchema={validationSchema}
       >
         <Form className='ui form'>
-          <FormField>
-            <Field name='title' placeholder='Event Title' />
-            <ErrorMessage name='title' render={error => <Label basic color='red' content={error} />} />
-          </FormField>
-          
+          <MyTextInput name='title' placeholder='Event Title' />
           <FormField>
             <Field name='category' placeholder='Category' />
           </FormField>
