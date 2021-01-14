@@ -8,6 +8,7 @@ import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 // import { Label } from 'semantic-ui-react';
 import MyTextInput from '../../../app/common/form/MyTextInput';
+import MyTextArea from '../../../app/common/form/MyTextArea';
 
 export default function EventForm({ match, history }) {
   const dispatch = useDispatch();
@@ -30,23 +31,6 @@ export default function EventForm({ match, history }) {
     venue: Yup.string().required(),
     date: Yup.string().required()
   })
- 
-  // function handleFormSubmit() {
-  //   selectedEvent
-  //     ? dispatch(updateEvent({...selectedEvent, ...values}))
-  //     : dispatch(createEvent({
-  //       ...values,
-  //       id: cuid(),
-  //       hostedBy: 'Harry Placeholder',
-  //       attendees: [{
-  //         id: 'placeholder_id',
-  //         name: 'Pete Placeholder',
-  //         photoURL: 'https://randomuser.me/api/portraits/men/29.jpg'
-  //       }],
-  //       hostPhotoURL: '/assets/icons/user.svg'
-  //     }));
-  //   history.push('/events');
-  // }
 
   return (
     <Segment clearing>
@@ -75,7 +59,9 @@ export default function EventForm({ match, history }) {
         <Form className='ui form'>
           <Header sub color='teal' content='Event Details' />
           <MyTextInput name='title' placeholder='Event Title' />
-          <MyTextInput name='category' placeholder='Description' />
+          <MyTextInput name='category' placeholder='Event Category' />
+          <MyTextArea name='description' placeholder='Description' rows='3' />
+
           <Header sub color='teal' content='Event Location Details' />
           <MyTextInput name='city' placeholder='City' />
           <MyTextInput name='venue' placeholder='Venue' />
